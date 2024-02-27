@@ -5,9 +5,14 @@ export default async function ValideURL(url){
         if(url.indexOf(properties)!=-1){
             valited = true;
         })
-    if (valited === true){
-
-
+    if (valited){  
+        try {
+            let url = new URL(url)
+            return true
+          } catch(err) {
+              return false
+          }
     }
+    return false
 
 }

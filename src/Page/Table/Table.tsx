@@ -1,17 +1,15 @@
 import React, { useMemo } from 'react';
 import { useSortBy, useTable } from 'react-table';
+import styled from 'styled-components';
 
 const Table = ({ data }) => {
   const columns = useMemo(
     () => [
-      { Header: 'ID', accessor: 'id' },
-      { Header: 'First Name', accessor: 'first_name' },
-      { Header: 'Last Name', accessor: 'last_name' },
-      { Header: 'Email', accessor: 'email' },
-      { Header: 'Phone', accessor: 'phone' },
-      { Header: 'State', accessor: 'state' },
-      { Header: 'City', accessor: 'city' },
-      { Header: 'Address', accessor: 'address' },
+      { Header: 'Photo', accessor: 'image' },
+      { Header: 'nome', accessor: 'name' },
+      { Header: 'Cargo', accessor: 'job' },
+      { Header: 'Data de Adimissão', accessor: 'admission_date' },
+      { Header: 'telefone', accessor: 'phone' },
     ],
     [],
   );
@@ -22,7 +20,7 @@ const Table = ({ data }) => {
   );
 
   return (
-    <div className="table-container">
+    <TableStyle>
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
@@ -51,8 +49,20 @@ const Table = ({ data }) => {
           })}
         </tbody>
       </table>
-    </div>
+    </TableStyle>
   );
 };
 
 export default Table;
+
+const TableStyle = styled.div`
+  table {
+  }
+  th {
+    background: linear-gradient(180deg, #5a84c0 0%, #594ed2 100%);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px 8px 0px 0px;
+    padding: 14px 0px;
+    gap: 32px;
+  }
+`;

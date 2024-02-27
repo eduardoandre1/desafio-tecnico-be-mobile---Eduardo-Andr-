@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+
 import Table from '../Table/Table';
+import Header from '../Header/Header';
 
 export default function MainPage() {
   const [data, setData] = useState([]);
@@ -10,16 +12,16 @@ export default function MainPage() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://cities-qd9i.onrender.com/agents');
-      const agents = await response.json();
-      setData(agents);
+      const response = await fetch('http://localhost:3000/employees');
+      const employees = await response.json();
+      setData(employees);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   };
   return (
     <>
-      <h1> header</h1>
+      <Header />
       <h2> searct bar</h2>
       <Table data={data} />
     </>

@@ -73,7 +73,7 @@ const TableStyle = styled.div`
     background: linear-gradient(180deg, #5a84c0 0%, #594ed2 100%);
     box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.2);
     border-radius: 16px 16px 0px 0px;
-    padding: 14px 0px;
+    padding-left: 35px;
     gap: 32px;
     color : white;
     text-align: start;
@@ -87,25 +87,27 @@ const TableStyle = styled.div`
   tr {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-weight: 2em;
+    font-size: 2em;
+    line-height: 1em;
     height: 49px;
     justify-content: center;
     text-align: start;
     border-bottom: #ddd solid 2px;
 
   }
-  tr:hover {background-color: coral;}
+  
   tbody {
-    
+    tr:hover {background-color: coral;}
+    color: black;
     img {
-       height: 5em;
-       width: 5em;
+       height: 34px;
+       width: 34px;
        border-radius: 50%;
        align-self: center;
        display: flex;
        justify-self: center;
+
     }
   }
   td {

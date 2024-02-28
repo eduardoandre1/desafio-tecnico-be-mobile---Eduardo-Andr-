@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import Table from '../Table/Table';
 import Header from '../Header/Header';
+import Table from '../Table/TableDesktop';
+import SearchBar from '../seachBar/SeachBar';
 
 const Conteiner = styled.div`
-width: 100 vw;
-height: 100 vh;
-body {
-    background-color: azure;
-}
-`
+  width: 100 vw;
+  height: 100vmin;
+  background-color:  #F0F0F0;
+`;
 export default function MainPage() {
   const [data, setData] = useState([]);
 
@@ -29,12 +28,24 @@ export default function MainPage() {
   };
   return (
     <Conteiner>
-        <Header />
-      <h2> searct bar</h2>
+      <Header />
+      <PageTitle>
+        <h1>Funcionarios</h1>
+        <SearchBar />
+      </PageTitle>
       <Table data={data} />
     </Conteiner>
-      
   );
 }
 
+const PageTitle = styled.div`
+height: 111px;
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+justify-content: space-between;
+align-items: center;
+display: flex;
+flex-direction: row;
 
+` 

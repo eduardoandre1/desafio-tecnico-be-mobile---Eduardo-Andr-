@@ -4,10 +4,11 @@ import styled from 'styled-components';
 import Header from '../Header/Header';
 import Table from '../Table/TableDesktop';
 import SearchBar from '../seachBar/SeachBar';
+import TableMobile from '../Table/TableMoblie';
 
 const Conteiner = styled.div`
   width: 100 vw;
-  height: 100vmin;
+  height: 100vmax;
   background-color:  #F0F0F0;
 `;
 export default function MainPage() {
@@ -26,6 +27,7 @@ export default function MainPage() {
       console.error('Error fetching data:', error);
     }
   };
+  console.log(data)
   return (
     <Conteiner>
       <Header />
@@ -33,7 +35,7 @@ export default function MainPage() {
         <h1>Funcionarios</h1>
         <SearchBar />
       </PageTitle>
-      <Table data={data} />
+      {window.innerWidth >= 800?<Table data={data} />:<TableMobile data={data} />}
     </Conteiner>
   );
 }

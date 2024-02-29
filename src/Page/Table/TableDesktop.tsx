@@ -67,23 +67,26 @@ const TableStyle = styled.div`
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    padding-inline: initial;
 
   }
   thead {
     background: linear-gradient(180deg, #5a84c0 0%, #594ed2 100%);
     box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.2);
     border-radius: 16px 16px 0px 0px;
-    padding-left: 35px;
     gap: 32px;
     color : white;
     text-align: start;
-  }
-  th {
+    margin-left: 50px;
+    th {
     text-align: start;
     width: fit-content;
     justify-items: center;
     align-items: center;
+    padding: 40px;
   }
+  }
+  
   tr {
     font-family: 'Roboto';
     font-style: normal;
@@ -94,6 +97,7 @@ const TableStyle = styled.div`
     justify-content: center;
     text-align: start;
     border-bottom: #ddd solid 2px;
+    align-items: center;
 
   }
   
@@ -113,5 +117,6 @@ const TableStyle = styled.div`
   td {
     justify-content: center;
     align-content: center;
+    padding: 40px;
   }
 `;

@@ -4,7 +4,7 @@ export default function SearchBar() {
   return (
     <Box>
       <input
-        placeholder="Procure por uma cidade"
+        placeholder="Pesquisar"
         //value={global.location }
         //onChange={(input) => global.setlocation(input.target.value)}
       />
@@ -23,7 +23,7 @@ const Box = styled.div`
   border: 1px solid #dfdfdf;
   border-radius: 8px;
   width: 290px;
-  height: 50px;
+  height: 50px; 
   
   font-family: 'Roboto';
   font-style: normal;

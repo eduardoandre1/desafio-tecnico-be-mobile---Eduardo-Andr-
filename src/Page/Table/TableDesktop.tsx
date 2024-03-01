@@ -6,11 +6,11 @@ import styled from 'styled-components';
 const Table = ({ data }) => {
   const columns = useMemo(
     () => [
-      { Header: 'foto', accessor: 'image' },
-      { Header: 'nome', accessor: 'name' },
-      { Header: 'Cargo', accessor: 'job' },
-      { Header: 'Data de Admissão', accessor: 'admission_date' },
-      { Header: 'telefone', accessor: 'phone' },
+      { Header: 'FOTO', accessor: 'image' },
+      { Header: 'NOME', accessor: 'name' },
+      { Header: 'CARGO', accessor: 'job' },
+      { Header: 'DATA DE ADMISSÃO', accessor: 'admission_date' },
+      { Header: 'TELEFONE', accessor: 'phone' },
     ],
     [],
   );
@@ -41,7 +41,7 @@ const Table = ({ data }) => {
           {rows.map((row) => {
             prepareRow(row);
             let cell = row.cells.map((cell)=>{
-                if (cell.column.Header == "foto"){return <td {...cell.getCellProps()}> <img src={cell.value} alt="" /></td>}
+                if (cell.column.Header == "FOTO"){return <td {...cell.getCellProps()}> <img src={cell.value} alt="" /></td>}
                 else{return <td {...cell.getCellProps()}>{cell.value}</td>}})
             return (
               <tr {...row.getRowProps()}>

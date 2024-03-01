@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-//import "resources/Logo Be.svg";
+import Logo from '../../assets/LogoBe.svg';
 export default function Header() {
   return (
     <>
       <HeadStyle>
-       <img src="resources/LogoBe.svg" alt="" />
+       <img src={Logo} alt="" />
       </HeadStyle>
     </>
   );

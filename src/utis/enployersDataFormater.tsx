@@ -9,8 +9,6 @@ export default function enployersDataFormater(data){
         if(enployer.phone.length == 11){
             enployer.phone = ' ('+enployer.phone.substr(0,2)+') '+enployer.phone.substr(2,7)+'-'+enployer.phone.substr(7);
         }
-
-
         return enployer
     })
 

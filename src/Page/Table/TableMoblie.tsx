@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { SlArrowDown } from "react-icons/sl";
+
 
 export default function TableMobile({ data }) {
   return (
@@ -14,7 +16,7 @@ export default function TableMobile({ data }) {
             <summary>
               <img src={data.image} />
               <h1>{data.name}</h1>
-              <h1>icone</h1>
+              <SlArrowDown />
             </summary>
             <ul>
               <li>{data.admission_date}</li>

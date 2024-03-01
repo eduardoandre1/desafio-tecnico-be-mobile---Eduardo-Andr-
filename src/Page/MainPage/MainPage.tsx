@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import Table from '../Table/TableDesktop';
 import SearchBar from '../seachBar/SeachBar';
 import TableMobile from '../Table/TableMoblie';
+import enployersDataFormater from '../../utis/enployersDataFormater';
 
 const Conteiner = styled.div`
   width: 100 vw;
@@ -27,7 +28,7 @@ export default function MainPage() {
       console.error('Error fetching data:', error);
     }
   };
-  console.log(data)
+  enployersDataFormater(data)
   return (
     <Conteiner>
       <Header />

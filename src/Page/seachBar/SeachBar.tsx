@@ -1,12 +1,14 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 
 export default function SearchBar() {
+  const [searchName, setSearchName] = useState('');
   return (
     <Box>
       <input
         placeholder="Pesquisar"
-        //value={global.location }
-        //onChange={(input) => global.setlocation(input.target.value)}
+        value={searchName}
+        onChange={(input) => setSearchName(input.target.value)}
       />
       <img
         src="https://th.bing.com/th/id/OIP.J-NC5zdHendWhPtlgsY0LgHaHa?rs=1&pid=ImgDetMain"
@@ -37,5 +39,6 @@ const Box = styled.div`
     margin: 0 auto;
     width: 24px;
     height: 24px;
+    cursor: pointer;
   }
 `;

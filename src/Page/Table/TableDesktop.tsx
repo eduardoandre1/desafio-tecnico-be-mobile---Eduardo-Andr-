@@ -102,7 +102,7 @@ const TableStyle = styled.div`
   }
   
   tbody {
-    tr:hover {background-color: coral;}
+    tr:hover {background-color: orange;}
     color: black;
     img {
        height: 34px;

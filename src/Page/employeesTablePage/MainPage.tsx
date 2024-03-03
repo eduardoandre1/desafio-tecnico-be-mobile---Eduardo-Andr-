@@ -4,8 +4,8 @@ import employersFilter from '../../components/defautsFunctions/employers/employe
 import enployersDataFormater from '../../components/defautsFunctions/employers/enployersDataFormater';
 import Header from '../../components/Header/Header';
 import SearchBar from '../../components/seachBar/SeachBar';
-import { Conteiner } from './styleMainPage';
-import { PageTitle } from './styleMainPage';
+import { Conteiner } from './style.MainPage';
+import { PageTitle } from './style.MainPage';
 import Table from './Table/tableDesktop/TableDesktop';
 import TableMobile from './Table/tableMobile/TableMoblie';
 

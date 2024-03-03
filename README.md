@@ -1,4 +1,5 @@
-# Vite + React + Typescript + Eslint + Prettier
+## beMobile 
+Powered by: Vite + React + Typescript + Eslint + Prettier
 
 A starter for React with Typescript with the fast Vite and all static code testing with Eslint and formatting with Prettier.
 
@@ -8,17 +9,14 @@ I found out about Vite and I wanted to have a boilerplate for the technologies t
 
 ## Installation
 
-Clone the repo and run `yarn install`
+Clone the repo and run `yarn install` or `npm install`
 
-or Run command
-
-```
-npx degit TheSwordBreaker/vite-reactts-eslint-prettier project-name
-```
 
 ## Start
 
-After the successfull installation of the packages: `yarn dev`
+After the successfull installation of the packages: 
+to start:
+`yarn dev` or `npm run start`
 
 ## Steps in Vscode
 
@@ -32,6 +30,4 @@ After the successfull installation of the packages: `yarn dev`
 
 ![Screenshot (253)_LI](https://user-images.githubusercontent.com/52120562/162486286-7383a737-d555-4f9b-a4dd-c4a81deb7b96.jpg)
 
-If Everything is Good Then It Should Work, but let me new if something else happens
 
-Made with ❤️ by theSwordBreaker(we Destory all types of sword ⚡)

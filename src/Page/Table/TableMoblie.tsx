@@ -19,15 +19,16 @@ export default function TableMobile({ data }) {
             </summary>
             <ul>
               <li>
+                <p><strong>Cargo</strong></p>
+                <p>{data.job}</p>
+              </li>
+              <li>
                 <p><strong>Data de admissão</strong></p>
                 <p>{data.admission_date}</p>
               </li>
               <li>
                 <p><strong>Telephone</strong></p>
-                <p>{data.phone}</p></li>
-              <li>
-                <p><strong>Cargo</strong></p>
-                <p>{data.job}</p>
+                <p>{data.phone}</p>
               </li>
             </ul>
           </DetailsFormat>

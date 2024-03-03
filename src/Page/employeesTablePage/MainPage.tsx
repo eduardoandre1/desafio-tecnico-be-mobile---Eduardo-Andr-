@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+import Header from '../../components/Header/Header';
+import employersFilter from '../../utis/employersFilter';
 import enployersDataFormater from '../../utis/enployersDataFormater';
-import Header from '../Header/Header';
 import SearchBar from '../seachBar/SeachBar';
 import Table from '../Table/TableDesktop';
 import TableMobile from '../Table/TableMoblie';
@@ -14,7 +15,8 @@ const Conteiner = styled.div`
 `;
 export default function MainPage() {
   const [data, setData] = useState([]);
-
+  const [searchName, setSearchName] = useState('');
+  const [filter, setFilter] = useState(data);
   useEffect(() => {
     fetchData();
   }, []);
@@ -29,14 +31,17 @@ export default function MainPage() {
     }
   };
   enployersDataFormater(data);
+  useEffect(() => {
+    setFilter(employersFilter(data, searchName));
+  }, [searchName]);
   return (
     <Conteiner>
       <Header />
       <PageTitle>
-        <h1>Funcionarios</h1>
-        <SearchBar />
+        <h1>Funcionários</h1>
+        <SearchBar searchName={searchName} setSearchName={setSearchName} />
       </PageTitle>
-      {window.innerWidth >= 800 ? <Table data={data} /> : <TableMobile data={data} />}
+      {window.innerWidth >= 800 ? <Table data={filter} /> : <TableMobile data={filter} />}
     </Conteiner>
   );
 }
@@ -59,7 +64,6 @@ const PageTitle = styled.div`
     padding-bottom: 14px;
     div {
       width: 100%;
-
     }
   }
 `;

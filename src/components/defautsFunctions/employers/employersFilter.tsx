@@ -13,7 +13,7 @@ export default function employersFilter(data, searchName) {
   if (filter.length === 0 && searchName.length > 0) {
     Swal.fire({
       title: 'Não foi possivel encontrar',
-      text: 'verifique se o usuario usuario ou o cargo foram escritos corretamente',
+      text: 'verifique se o usuário ou o cargo foram escritos corretamente',
       icon: 'error',
       confirmButtonText: 'ok',
     });

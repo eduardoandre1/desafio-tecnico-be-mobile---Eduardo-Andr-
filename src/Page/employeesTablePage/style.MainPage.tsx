@@ -4,7 +4,8 @@ export const Conteiner = styled.div`
   width: ${window.innerWidth};
   height: 100vmax;
   background-color: #f0f0f0;
-  font-size: calc(2vmin)`;
+  font-size: calc(2vmin);
+`
 
 export const PageTitle = styled.div`
   height: 111px;
